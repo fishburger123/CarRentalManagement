@@ -1,0 +1,69 @@
+﻿@page
+@model CarRentalManagement.Pages.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Customer</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Customer.DrivingLicense" class="control-label"></label>
+                <input asp-for="Customer.DrivingLicense" class="form-control" />
+                <span asp-validation-for="Customer.DrivingLicense" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.Address" class="control-label"></label>
+                <input asp-for="Customer.Address" class="form-control" />
+                <span asp-validation-for="Customer.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.ContactNumber" class="control-label"></label>
+                <input asp-for="Customer.ContactNumber" class="form-control" />
+                <span asp-validation-for="Customer.ContactNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.EmailAddress" class="control-label"></label>
+                <input asp-for="Customer.EmailAddress" class="form-control" />
+                <span asp-validation-for="Customer.EmailAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.DateCreated" class="control-label"></label>
+                <input asp-for="Customer.DateCreated" class="form-control" />
+                <span asp-validation-for="Customer.DateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.DateUpdated" class="control-label"></label>
+                <input asp-for="Customer.DateUpdated" class="form-control" />
+                <span asp-validation-for="Customer.DateUpdated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.CreatedBy" class="control-label"></label>
+                <input asp-for="Customer.CreatedBy" class="form-control" />
+                <span asp-validation-for="Customer.CreatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Customer.UpdatedBy" class="control-label"></label>
+                <input asp-for="Customer.UpdatedBy" class="form-control" />
+                <span asp-validation-for="Customer.UpdatedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
